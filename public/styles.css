@@ -67,8 +67,14 @@ header {
     margin: 1px;
 }
 
-.oppPkmn h3 p {
+.oppPkmn h3 {
     max-height: 50;
+    margin: 5px;
+}
+
+.oppPkmn p {
+    max-height: 25;
+    margin: 5px;
 }
 
 /* NOTE: Info styling for User */
@@ -106,8 +112,14 @@ header {
     margin: 1px;
 }
 
-.userPkmn h3 p {
+.userPkmn h3 {
     max-height: 50;
+    margin: 5px;
+}
+
+.userPkmn p {
+    max-height: 25;
+    margin: 5px;
 }
 
 /* NOTE: Info styling for Rolled Pokemon */
@@ -148,6 +160,12 @@ header {
     margin: 1px;
 }
 
-.rollPkmn h3 p {
+.rollPkmn h3 {
     max-height: 50;
+    margin: 5px;
+}
+
+.rollPkmn p {
+    max-height: 25;
+    margin: 5px;
 }
