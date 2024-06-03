@@ -31,14 +31,29 @@ header {
 }
 
 /* NOTE: Battle page specific styling */
+
+/* NOTE: Info styling for Opponent */
+.oppInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.oppInfo h2 {
+    margin: 15px;
+}
+
+.oppInfo p {
+    margin: 10px;
+    font-weight: bold;
+}
+
 /* NOTE: Styling for Opponent's Pokemon */
 .oppPkmn {
-    background-color: aqua;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .oppPkmn div {
@@ -49,20 +64,35 @@ header {
     border: 2px solid black;
     height: 200px;
     width: 200px;
+    margin: 1px;
 }
 
 .oppPkmn h3 p {
     max-height: 50;
 }
 
+/* NOTE: Info styling for User */
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.userInfo h2 {
+    margin: 15px;
+}
+
+.userInfo p {
+    margin: 10px;
+    font-weight: bold;
+}
+
 /* NOTE: Styling for User's Pokemon */
 .userPkmn {
-    background-color: magenta;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 .userPkmn div {
@@ -73,20 +103,38 @@ header {
     border: 2px solid black;
     height: 200px;
     width: 200px;
+    margin: 1px;
 }
 
 .userPkmn h3 p {
     max-height: 50;
 }
 
-/* NOTE: Styling for Pokemon being rolled for*/
+/* NOTE: Info styling for Rolled Pokemon */
+.rollInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.rollInfo h2 {
+    margin: 15px;
+}
+
+.rollInfo p {
+    margin: 10px;
+    font-weight: bold;
+}
+
+
+
+/* NOTE: Styling for Pokemon being rolled*/
 .rollPkmn {
-    background-color: gold;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 .rollPkmn div {
@@ -97,6 +145,7 @@ header {
     border: 2px solid black;
     height: 200px;
     width: 200px;
+    margin: 1px;
 }
 
 .rollPkmn h3 p {
