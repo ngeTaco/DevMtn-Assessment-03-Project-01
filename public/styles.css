@@ -1,3 +1,31 @@
 body {
     font-family: sans-serif;
 }
+
+header {
+    text-align: center;
+}
+
+/* NOTE: Log in page specific styling */
+.setup div {
+    margin-bottom: 1em;
+}
+
+.setup label {
+    margin-right: 1em;
+}
+
+#nameEntry {
+    display: flex;
+    justify-content: center;
+}
+
+#difficultySelect {
+    display: flex;
+    justify-content: center;
+}
+
+#startButton {
+    display: flex;
+    justify-content: center;
+}

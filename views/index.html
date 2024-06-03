@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/styles.css" />
     <title>Pokemon Battle Registration</title>
 </head>
+
 <body>
     <header>
         <h1>Pokemon Power Battle</h1>
     </header>
-    <section>
+    <section class="setup">
         <form>
-            <label>Your Name</label>
-            <input type="text" name="userName" />
-
-            <label>Choose your difficulty</label>
-        <select name="difficulty">
-            <option value="diffEasy">Easy</option>
-            <option value="diffHard">Hard</option>
-        </select>
+            <div id="nameEntry">
+                <label>Your Name: </label>
+                <input type="text" name="userName" />
+            </div>
+            <div id="difficultySelect">
+                <label>Choose your difficulty: </label>
+                <select name="difficulty">
+                    <option value="diffEasy">Easy</option>
+                    <option value="diffHard">Hard</option>
+                </select>
+            </div>
+            <div id="startButton">
+                <button type="submit">Proceed</button>
+            </div>
         </form>
     </section>
 </body>
+
 </html>
