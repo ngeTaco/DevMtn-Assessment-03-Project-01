@@ -1,0 +1,146 @@
+{
+    "pkmn1": {
+        "name": "lotad",
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/270.png"
+        },
+        "stats": [
+            {
+                "base_stat": 40,
+                "effort": 0,
+                "stat": {
+                    "name": "hp",
+                    "url": "https://pokeapi.co/api/v2/stat/1/"
+                }
+            },
+            {
+                "base_stat": 30,
+                "effort": 2,
+                "stat": {
+                    "name": "attack",
+                    "url": "https://pokeapi.co/api/v2/stat/2/"
+                }
+            }
+        ]
+    },
+    "pkmn2": {
+        "name": "gastly",
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png"
+        },
+        "stats": [
+            {
+                "base_stat": 30,
+                "effort": 0,
+                "stat": {
+                    "name": "hp",
+                    "url": "https://pokeapi.co/api/v2/stat/1/"
+                }
+            },
+            {
+                "base_stat": 35,
+                "effort": 2,
+                "stat": {
+                    "name": "attack",
+                    "url": "https://pokeapi.co/api/v2/stat/2/"
+                }
+            }
+        ]
+    },
+    "pkmn3": {
+        "name": "pichu",
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png"
+        },
+        "stats": [
+            {
+                "base_stat": 20,
+                "effort": 0,
+                "stat": {
+                    "name": "hp",
+                    "url": "https://pokeapi.co/api/v2/stat/1/"
+                }
+            },
+            {
+                "base_stat": 40,
+                "effort": 2,
+                "stat": {
+                    "name": "attack",
+                    "url": "https://pokeapi.co/api/v2/stat/2/"
+                }
+            }
+        ]
+    },
+    "pkmn4": {
+        "name": "sentret",
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png"
+        },
+        "stats": [
+            {
+                "base_stat": 35,
+                "effort": 0,
+                "stat": {
+                    "name": "hp",
+                    "url": "https://pokeapi.co/api/v2/stat/1/"
+                }
+            },
+            {
+                "base_stat": 46,
+                "effort": 2,
+                "stat": {
+                    "name": "attack",
+                    "url": "https://pokeapi.co/api/v2/stat/2/"
+                }
+            }
+        ]
+    },
+    "pkmn5": {
+        "name": "growlithe",
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png"
+        },
+        "stats": [
+            {
+                "base_stat": 55,
+                "effort": 0,
+                "stat": {
+                    "name": "hp",
+                    "url": "https://pokeapi.co/api/v2/stat/1/"
+                }
+            },
+            {
+                "base_stat": 70,
+                "effort": 2,
+                "stat": {
+                    "name": "attack",
+                    "url": "https://pokeapi.co/api/v2/stat/2/"
+                }
+            }
+        ]
+    },
+    "pkmn6": {
+        "name": "charizard",
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+        },
+        "stats": [
+            {
+                "base_stat": 78,
+                "effort": 0,
+                "stat": {
+                    "name": "hp",
+                    "url": "https://pokeapi.co/api/v2/stat/1/"
+                }
+            },
+            {
+                "base_stat": 84,
+                "effort": 2,
+                "stat": {
+                    "name": "attack",
+                    "url": "https://pokeapi.co/api/v2/stat/2/"
+                }
+            }
+        ]
+    }
+}
