@@ -29,3 +29,76 @@ header {
     display: flex;
     justify-content: center;
 }
+
+/* NOTE: Battle page specific styling */
+/* NOTE: Styling for Opponent's Pokemon */
+.oppPkmn {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.oppPkmn div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+.oppPkmn h3 p {
+    max-height: 50;
+}
+
+/* NOTE: Styling for User's Pokemon */
+.userPkmn {
+    background-color: magenta;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.userPkmn div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+.userPkmn h3 p {
+    max-height: 50;
+}
+
+/* NOTE: Styling for Pokemon being rolled for*/
+.rollPkmn {
+    background-color: gold;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.rollPkmn div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+.rollPkmn h3 p {
+    max-height: 50;
+}
