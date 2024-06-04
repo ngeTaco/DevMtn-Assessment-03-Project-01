@@ -24,6 +24,16 @@ app.get('/', (req, res) => {
     res.render('index.html')
 })
 
+app.get('/get-name', (req, res) => {
+    req.session.name = req.query.name
+
+    res.redirect('/battle')
+})
+
+app.get('/battle', (req, res) => {
+    res.render('battle.html')
+})
+
 app.listen(port, () => {
     console.log(`App listening on port http://localhost:${port}`);
 })
