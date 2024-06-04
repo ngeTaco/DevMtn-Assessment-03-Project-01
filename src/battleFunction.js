@@ -16,9 +16,17 @@ axios.get(pkmnUrl).then((response) => {
 function rollPokemon() {
     let rolledPkmn = {}
     if (index = 0, index < 3, index++) {
-        
+
     }
 }
 
-//roll for pokemon roll button click
-document.querySelector('#rollButton').addEventListener('click', rollPokemon);
+//roll for pokemon roll on button click
+document.querySelector('#rollButton').addEventListener('click', e => {
+    if (index = 0, index < 3, index++) {
+        axios.get(pkmnUrl).then((response) => {
+            document.querySelector('.rollName').innerText = response.data.name;
+            document.querySelector('.rollImage').innerHTML = `<img src=${response.data.sprites.front_default} />`;
+            document.querySelector('.rollAttack').innerText = response.data.stats[1].base_stat;
+        })
+    } then
+});
