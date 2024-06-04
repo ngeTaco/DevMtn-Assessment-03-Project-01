@@ -4,143 +4,53 @@
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png"
         },
-        "stats": [
-            {
-                "base_stat": 70,
-                "effort": 0,
-                "stat": {
-                    "name": "hp",
-                    "url": "https://pokeapi.co/api/v2/stat/1/"
-                }
-            },
-            {
-                "base_stat": 130,
-                "effort": 2,
-                "stat": {
-                    "name": "attack",
-                    "url": "https://pokeapi.co/api/v2/stat/2/"
-                }
-            }
-        ]
+        "stats": {
+            "base_stat": 130
+        }
     },
     "pkmn2": {
         "name": "haxorus",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/612.png"
         },
-        "stats": [
-            {
-                "base_stat": 76,
-                "effort": 0,
-                "stat": {
-                    "name": "hp",
-                    "url": "https://pokeapi.co/api/v2/stat/1/"
-                }
-            },
-            {
-                "base_stat": 147,
-                "effort": 2,
-                "stat": {
-                    "name": "attack",
-                    "url": "https://pokeapi.co/api/v2/stat/2/"
-                }
-            }
-        ]
+        "stats": {
+            "base_stat": 147
+        }
     },
     "pkmn3": {
         "name": "tyranitar",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png"
         },
-        "stats": [
-            {
-                "base_stat": 100,
-                "effort": 0,
-                "stat": {
-                    "name": "hp",
-                    "url": "https://pokeapi.co/api/v2/stat/1/"
-                }
-            },
-            {
-                "base_stat": 134,
-                "effort": 2,
-                "stat": {
-                    "name": "attack",
-                    "url": "https://pokeapi.co/api/v2/stat/2/"
-                }
-            }
-        ]
+        "stats": {
+            "base_stat": 134
+        }
     },
     "pkmn4": {
         "name": "blaziken",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png"
         },
-        "stats": [
-            {
-                "base_stat": 80,
-                "effort": 0,
-                "stat": {
-                    "name": "hp",
-                    "url": "https://pokeapi.co/api/v2/stat/1/"
-                }
-            },
-            {
-                "base_stat": 120,
-                "effort": 2,
-                "stat": {
-                    "name": "attack",
-                    "url": "https://pokeapi.co/api/v2/stat/2/"
-                }
-            }
-        ]
+        "stats": {
+            "base_stat": 120
+        }
     },
     "pkmn5": {
         "name": "mewtwo",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"
         },
-        "stats": [
-            {
-                "base_stat": 106,
-                "effort": 0,
-                "stat": {
-                    "name": "hp",
-                    "url": "https://pokeapi.co/api/v2/stat/1/"
-                }
-            },
-            {
-                "base_stat": 110,
-                "effort": 2,
-                "stat": {
-                    "name": "attack",
-                    "url": "https://pokeapi.co/api/v2/stat/2/"
-                }
-            }
-        ]
+        "stats": {
+            "base_stat": 110
+        }
     },
     "pkmn6": {
         "name": "gallade",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/475.png"
         },
-        "stats": [
-            {
-                "base_stat": 68,
-                "effort": 0,
-                "stat": {
-                    "name": "hp",
-                    "url": "https://pokeapi.co/api/v2/stat/1/"
-                }
-            },
-            {
-                "base_stat": 125,
-                "effort": 2,
-                "stat": {
-                    "name": "attack",
-                    "url": "https://pokeapi.co/api/v2/stat/2/"
-                }
-            }
-        ]
+        "stats": {
+            "base_stat": 125
+        }
     }
 }
