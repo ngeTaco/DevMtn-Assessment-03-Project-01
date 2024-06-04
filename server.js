@@ -24,16 +24,6 @@ app.get('/', (req, res) => {
     res.render('index.html')
 })
 
-app.get('/get-name', (req, res) => {
-    req.session.name = req.query.name
-
-    res.redirect('/battle')
-})
-
-app.get('/battle', (req, res) => {
-    res.render('battle.html')
-})
-
 // is this what I need to get the js working with express??
 app.get('/battleFunction', (req, res) => {
 })

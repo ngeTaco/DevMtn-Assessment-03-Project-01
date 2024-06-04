@@ -5,31 +5,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css" />
-    <title>Pokemon Battle Registration</title>
+    <title>Pokemon Battle</title>
 </head>
 
 <body>
     <header>
-        <h1>Pokemon Power Battle</h1>
+        <h1>Pokemon Battle</h1>
     </header>
-    <section class="setup">
-        <form >
-            <div id="nameEntry">
-                <label>Your Name: </label>
-                <input type="text" name="name" required/>
-            </div>
-            <div id="difficultySelect">
-                <label>Choose your difficulty: </label>
-                <select name="difficulty">
-                    <option value="diffEasy">Easy</option>
-                    <option value="diffHard">Hard</option>
-                </select>
-            </div>
-            <div id="startButton">
-                <button type="submit">Proceed</button>
-            </div>
-        </form>
+    <div class="oppInfo">
+        <h2>Your Opponent</h2>
+        <h3>Power Level</h3>
+        <p id="oppTotal">633</p>
+    </div>
+    <section class="oppPkmn">
+        <div>
+            <h3>scizor</h3>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png" />
+            <p>Attack Power</p>
+            <p>130</p>
+        </div>
+        <div>
+            <h3>charizard</h3>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" />
+            <p>Attack Power</p>
+            <p>84</p>
+        </div>
+        <div>
+            <h3>tyranitar</h3>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png" />
+            <p>Attack Power</p>
+            <p>134</p>
+        </div>
+        <div>
+            <h3>blaziken</h3>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png" />
+            <p>Attack Power</p>
+            <p>120</p>
+        </div>
+        <div>
+            <h3>mewtwo</h3>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" />
+            <p>Attack Power</p>
+            <p>110</p>
+        </div>
+        <div>
+            <h3>pikachu</h3>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" />
+            <p>Attack Power</p>
+            <p>55</p>
+        </div>
     </section>
+    <div class="userInfo">
+        <h2>Create your team</h2>
+        <p>Current Power</p>
+        <p id="userTotal">0</p>
+    </div>
+    <section class="userPkmn">
+        <div>
+            <h3>Pokemon name</h3>
+            <img src="" />
+            <h3>Attack Power</h3>
+            <p>0</p>
+        </div>
+        <div>
+            <h3>Pokemon name</h3>
+            <img src="" />
+            <p>Attack Power</p>
+            <p>0</p>
+        </div>
+        <div>
+            <h3>Pokemon name</h3>
+            <img src="" />
+            <p>Attack Power</p>
+            <p>0</p>
+        </div>
+        <div>
+            <h3>Pokemon name</h3>
+            <img src="" />
+            <p>Attack Power</p>
+            <p>0</p>
+        </div>
+        <div>
+            <h3>Pokemon name</h3>
+            <img src="" />
+            <p>Attack Power</p>
+            <p>0</p>
+        </div>
+        <div>
+            <h3>Pokemon name</h3>
+            <img src="" />
+            <p>Attack Power</p>
+            <p>0</p>
+        </div>
+    </section>
+    <div class="rollInfo">
+        <h2>Draft Pool</h2>
+        <p>Pick from the the pool of 3 until you have a team of 6</p>
+        <p>Click Roll to create a new pool of Pokemon</p>
+        <div id="rollButton">
+            <button type="button">Roll for Pokemon</button>
+        </div>
+    </div>
+    <section class="rollPkmn">
+        <div>
+            <h3 class="rollName">Pokemon name</h3>
+            <img class="rollImage" src="" />
+            <p>Attack Power</p>
+            <p class="rollAttack">0</p>
+        </div>
+        <div>
+            <h3 class="rollName">Pokemon name</h3>
+            <img class="rollImage" src="" />
+            <p>Attack Power</p>
+            <p class="rollAttack">0</p>
+        </div>
+        <div>
+            <h3 class="rollName">Pokemon name</h3>
+            <img class="rollImage" src="" />
+            <p>Attack Power</p>
+            <p class="rollAttack">0</p>
+        </div>
+    </section>
+    <script type="module" src="./battleFunction.js"></script>
 </body>
 
 </html>
