@@ -1,5 +1,5 @@
 //NOTE: roll for pokemon roll on button click
-const rolledPkmn = []
+const rolledPkmn = [];
 const userPkmn = [];
 
 function rollPokemon() {
@@ -25,16 +25,22 @@ document.querySelector('#rollButton').addEventListener('click', rollPokemon);
 
 function handleRolledPkmn(event) {
     const targetPkmn = event.currentTarget.getAttribute('data-index');
-    addToTeam(rolledPkmn[targetPkmn])
+    addToTeam(rolledPkmn[targetPkmn]);
+    rollPokemon();
 }
 
-let selectPkmn = document.querySelectorAll('.rollPkmn').forEach(pkmn => pkmn.addEventListener(`click`, handleRolledPkmn))
+document.querySelectorAll('.rollPkmn').forEach(pkmn => pkmn.addEventListener(`click`, handleRolledPkmn))
 
 //TODO: create function with 2 params, 1: pokedata to populate 2:target index
+//TODO: call roll pokemon in addToTeam
 
 function addToTeam(pokedata) {
-    userPkmn[userPkmn.length] = pokedata
-    document.querySelector(`#user${index} .userName`).innerText = pokedata.name;
-    document.querySelector(`#user${index} .userImage`).src = pokedata.sprite;
-    document.querySelector(`#user${index} .userAttack`).innerText = pokedata.attack;
+    const targetIndex = userPkmn.length
+    userPkmn[targetIndex] = pokedata
+    document.querySelector(`#user${targetIndex} .rollName`).innerText = pokedata.name;
+    document.querySelector(`#user${targetIndex} .rollImage`).src = pokedata.sprite;
+    document.querySelector(`#user${targetIndex} .rollAttack`).innerText = pokedata.attack;
 }
+//TODO: change rollName, rollImage, rollAttack to userVariants and in HTML/CSS
+
+//TODO: Endgame function that will send winner/loser alert, and reset pokemon team
