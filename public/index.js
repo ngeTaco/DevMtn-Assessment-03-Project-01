@@ -27,15 +27,18 @@ function handleRolledPkmn(event) {
     const targetPkmn = event.currentTarget.getAttribute('data-index');
     addToTeam(rolledPkmn[targetPkmn]);
     rollPokemon();
+    calculateTotalAttack();
+    decideWinner();
 }
 
 document.querySelectorAll('.rollPkmn').forEach(pkmn => pkmn.addEventListener(`click`, handleRolledPkmn))
 
-//TODO: create function with 2 params, 1: pokedata to populate 2:target index
-//TODO: call roll pokemon in addToTeam
 
 function addToTeam(pokedata) {
     const targetIndex = userPkmn.length
+    if (targetIndex > 5) {
+        return;
+    }
     userPkmn[targetIndex] = pokedata
     document.querySelector(`#user${targetIndex} .rollName`).innerText = pokedata.name;
     document.querySelector(`#user${targetIndex} .rollImage`).src = pokedata.sprite;
@@ -43,4 +46,23 @@ function addToTeam(pokedata) {
 }
 //TODO: change rollName, rollImage, rollAttack to userVariants and in HTML/CSS
 
+function calculateTotalAttack() {
+    let totalAttack = 0;
+    userPkmn.forEach(pkmn => totalAttack += pkmn.attack)
+    document.querySelector('#userTotal').innerText = totalAttack;
+    return totalAttack;
+}
+
 //TODO: Endgame function that will send winner/loser alert, and reset pokemon team
+function decideWinner() {
+    if (userPkmn.length === 6) {
+        const userAttack = calculateTotalAttack();
+        window.setTimeout(() => {
+            if (userAttack >= 633) {
+                alert('Winner, Winner, Chicken Dinner!')
+            } else {
+                alert('Try again, Loser!')
+            } location.reload();
+        }, 250)
+    }
+}
