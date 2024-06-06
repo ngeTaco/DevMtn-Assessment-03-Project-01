@@ -69,14 +69,14 @@ header {
 }
 
 /* NOTE: Styling for User's Pokemon */
-.userPkmn {
+.userStyling {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.userPkmn div {
+.userStyling div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,12 +87,12 @@ header {
     margin: 1px;
 }
 
-.userPkmn h3 {
+.userStyling h3 {
     max-height: 50;
     margin: 5px;
 }
 
-.userPkmn p {
+.userStyling p {
     max-height: 25;
     margin: 5px;
 }
@@ -117,14 +117,14 @@ header {
 
 
 /* NOTE: Styling for Pokemon being rolled*/
-.rollPkmn {
+.rolledStyling {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.rollPkmn div {
+.rolledStyling div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,12 +135,12 @@ header {
     margin: 1px;
 }
 
-.rollPkmn h3 {
+.rolledStyling h3 {
     max-height: 50;
     margin: 5px;
 }
 
-.rollPkmn p {
+.rolledStyling p {
     max-height: 25;
     margin: 5px;
 }
