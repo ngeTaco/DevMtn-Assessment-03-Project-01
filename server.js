@@ -21,7 +21,7 @@ nunjucks.configure('views', {
     express: app
 })
 app.get('/', (req, res) => {
-    res.render('index.html')
+    res.render('index.html.njk')
 })
 
 // is this what I need to get the js working with express??
