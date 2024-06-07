@@ -11,6 +11,7 @@ function rollPokemon() {
             document.querySelector(`#roll${index} .rollName`).innerText = response.data.name;
             document.querySelector(`#roll${index} .rollImage`).src = response.data.sprites.front_default;
             document.querySelector(`#roll${index} .rollAttack`).innerText = response.data.stats[1].base_stat;
+            document.querySelector(`#roll${index} .atkText`).innerText = 'Attack Power';
             let pkmn = {
                 index: index,
                 name: response.data.name,
@@ -32,6 +33,7 @@ function addToTeam(pokedata) {
     document.querySelector(`#user${targetIndex} .userName`).innerText = pokedata.name;
     document.querySelector(`#user${targetIndex} .userImage`).src = pokedata.sprite;
     document.querySelector(`#user${targetIndex} .userAttack`).innerText = pokedata.attack;
+    document.querySelector(`#user${targetIndex} .atkText`).innerText = 'Attack Power';
 }
 
 //Note: Calculate combined Attack strength from userPkmn array
@@ -50,7 +52,7 @@ function decideWinner() {
             if (userAttack >= 633) {
                 alert('Winner, Winner, Chicken Dinner!')
             } else {
-                alert('Try again, Loser!')
+                alert('Try Again! You can do it!')
             } location.reload();
         }, 250)
     }
