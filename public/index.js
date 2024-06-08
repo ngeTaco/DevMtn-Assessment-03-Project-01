@@ -38,24 +38,18 @@ function addToTeam(pokedata) {
     
     const divElement = document.createElement('div');
     divElement.setAttribute('class', 'userPkmn');
-    divElement.setAttribute('id', `user${targetIndex}`);
-    divElement.setAttribute('data-index', `${targetIndex}`);
 
-    //Note: create elements with class for styling
+    //Note: create elements with data
     const headerElement = document.createElement('h3');
-    headerElement.setAttribute('class', 'userName');
     headerElement.innerText = pokedata.name;;
 
     const imageElement = document.createElement('img');
-    imageElement.setAttribute('class', 'userImage');
     imageElement.src = pokedata.sprite;
 
     const paragraphAttackElement = document.createElement('p');
-    paragraphAttackElement.setAttribute('class', 'atkText');
     paragraphAttackElement.innerText = 'Attack Power';
 
     const paragraphPowerElement = document.createElement('p');
-    paragraphPowerElement.setAttribute('class', 'userAttack');
     paragraphPowerElement.innerText = pokedata.attack;
 
     docFragment.appendChild(divElement);
