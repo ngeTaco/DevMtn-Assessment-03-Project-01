@@ -24,33 +24,24 @@ function rollPokemon() {
 }
 
 //Note: add Pokemon to User's Team using index placement in HTML and from userPkmn array
-// function addToTeam(pokedata) {
-//     const targetIndex = userPkmn.length
-//     if (targetIndex > 5) {
-//         return;
-//     }
-//     userPkmn[targetIndex] = pokedata;
-//     document.querySelector(`#user${targetIndex} .userName`).innerText = pokedata.name;
-//     document.querySelector(`#user${targetIndex} .userImage`).src = pokedata.sprite;
-//     document.querySelector(`#user${targetIndex} .userAttack`).innerText = pokedata.attack;
-//     document.querySelector(`#user${targetIndex} .atkText`).innerText = 'Attack Power';
-// }
-
 function addToTeam(pokedata) {
     const targetIndex = userPkmn.length
     if (targetIndex > 5) {
         return;
     }
     userPkmn[targetIndex] = pokedata;
-    //NEW: Start New Code
+
+    //Note: create document fragment to add new divs with elements to display selected pokemon
     const sectionUserPokemon = document.querySelector('.userStyling');
 
     const docFragment = document.createDocumentFragment();
+    
     const divElement = document.createElement('div');
     divElement.setAttribute('class', 'userPkmn');
     divElement.setAttribute('id', `user${targetIndex}`);
     divElement.setAttribute('data-index', `${targetIndex}`);
 
+    //Note: create elements with class for styling
     const headerElement = document.createElement('h3');
     headerElement.setAttribute('class', 'userName');
     headerElement.innerText = pokedata.name;;
@@ -68,20 +59,15 @@ function addToTeam(pokedata) {
     paragraphPowerElement.innerText = pokedata.attack;
 
     docFragment.appendChild(divElement);
+
     divElement.appendChild(headerElement);
     divElement.appendChild(imageElement);
     divElement.appendChild(paragraphAttackElement);
     divElement.appendChild(paragraphPowerElement);
 
     sectionUserPokemon.appendChild(docFragment);
-
-
-    // document.querySelector(`#user${targetIndex} .userName`).innerText = pokedata.name;
-    // document.querySelector(`#user${targetIndex} .userImage`).src = pokedata.sprite;
-    // document.querySelector(`#user${targetIndex} .userAttack`).innerText = pokedata.attack;
-    // document.querySelector(`#user${targetIndex} .atkText`).innerText = 'Attack Power';
 }
-//NEW: End New Code
+
 //Note: Calculate combined Attack strength from userPkmn array
 function calculateTotalAttack() {
     let totalAttack = 0;
