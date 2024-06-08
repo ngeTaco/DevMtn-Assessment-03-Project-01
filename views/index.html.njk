@@ -1,91 +1,96 @@
-{%  extends "base.html.njk"  %}
+{% extends "base.html.njk" %}
 
 {% block body %}
-    <header>
-        <h1>Pokemon Battle</h1>
-    </header>
-    {# Text information for Opponent #}
-    <div class="oppInfo">
-        <h2>Your Opponent</h2>
-        <h3>Power Level</h3>
-        <p id="oppTotal">633</p>
+<header>
+    <h1>Pokemon Battle</h1>
+</header>
+{# Text information for Opponent #}
+<div class="oppInfo">
+    <h2>Your Opponent</h2>
+    <h3>Power Level</h3>
+    <p id="oppTotal">633</p>
+</div>
+{# Hard coded information for Opponent Pokemon #}
+<section class="oppPkmn">
+    <div id="opponent0" data-index="0">
+        <h3 class="oppName">scizor</h3>
+        <img class="oppImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png" />
+        <p>Attack Power</p>
+        <p class="oppAttack">130</p>
     </div>
-    {# Hard coded information for Opponent Pokemon #}
-    <section class="oppPkmn">
-        <div>
-            <h3>scizor</h3>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png" />
-            <p>Attack Power</p>
-            <p>130</p>
-        </div>
-        <div>
-            <h3>charizard</h3>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" />
-            <p>Attack Power</p>
-            <p>84</p>
-        </div>
-        <div>
-            <h3>tyranitar</h3>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png" />
-            <p>Attack Power</p>
-            <p>134</p>
-        </div>
-        <div>
-            <h3>blaziken</h3>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png" />
-            <p>Attack Power</p>
-            <p>120</p>
-        </div>
-        <div>
-            <h3>mewtwo</h3>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" />
-            <p>Attack Power</p>
-            <p>110</p>
-        </div>
-        <div>
-            <h3>pikachu</h3>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" />
-            <p>Attack Power</p>
-            <p>55</p>
-        </div>
-    </section>
-    {# Text information for rolling and drafting pokemon #}
-    <div class="rollInfo">
-        <h2>Draft Pool</h2>
-        <p>Pick from the the pool of 3 until you have a team of 6</p>
-        <p>Click Roll to create a new pool of Pokemon</p>
-        <div id="rollButton">
-            <button type="button">Roll for Pokemon</button>
-        </div>
+    <div id="opponent1" data-index="1">
+        <h3 class="oppName">charizard</h3>
+        <img class="oppImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" />
+        <p>Attack Power</p>
+        <p class="oppAttack">84</p>
     </div>
-    {# Empty Boxes to be fill with rolled pokemon #}
-    <section class="rolledStyling">
-        <div class="rollPkmn" id="roll0" data-index="0">
-            <h3 class="rollName">Roll for Pokemon</h3>
-            <img class="rollImage" src="" />
-            <p class="atkText"></p>
-            <p class="rollAttack"></p>
-        </div>
-        <div class="rollPkmn" id="roll1" data-index="1">
-            <h3 class="rollName">Roll for Pokemon</h3>
-            <img class="rollImage" src="" />
-            <p class="atkText"></p>
-            <p class="rollAttack"></p>
-        </div>
-        <div class="rollPkmn" id="roll2" data-index="2">
-            <h3 class="rollName">Roll for Pokemon</h3>
-            <img class="rollImage" src="" />
-            <p class="atkText"></p>
-            <p class="rollAttack"></p>
-        </div>
-    </section>
-    {# Text Information for user's current team #}
-    <div class="userInfo">
-        <h2>Create your team</h2>
-        <p>Current Power</p>
-        <p id="userTotal"></p>
+    <div id="opponent2" data-index="2">
+        <h3 class="oppName">tyranitar</h3>
+        <img class="oppImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png" />
+        <p>Attack Power</p>
+        <p class="oppAttack">134</p>
     </div>
-    {# Section to fill with user selected pokemon per js file #}
-    <section class="userStyling">
-    </section>
-    {% endblock %}
+    <div id="opponent3" data-index="3">
+        <h3 class="oppName">blaziken</h3>
+        <img class="oppImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png" />
+        <p>Attack Power</p>
+        <p class="oppAttack">120</p>
+    </div>
+    <div id="opponent4" data-index="4">
+        <h3 class="oppName">mewtwo</h3>
+        <img class="oppImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" />
+        <p>Attack Power</p>
+        <p class="oppAttack">110</p>
+    </div>
+    <div id="opponent5" data-index="5">
+        <h3 class="oppName">pikachu</h3>
+        <img class="oppImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" />
+        <p>Attack Power</p>
+        <p class="oppAttack">55</p>
+    </div>
+</section>
+<div class="oppInfo">
+    <div>
+        <button id="rollOpponentButton" type="button">Roll for a randomized opponent</button>
+    </div>
+</div>
+{# Text information for rolling and drafting pokemon #}
+<div class="rollInfo">
+    <h2>Draft Pool</h2>
+    <p>Pick from the the pool of 3 until you have a team of 6</p>
+    <p>Click Roll to create a new pool of Pokemon</p>
+    <div>
+        <button id="rollButton" type="button">Roll for Pokemon</button>
+    </div>
+</div>
+{# Empty Boxes to be fill with rolled pokemon #}
+<section class="rolledStyling">
+    <div class="rollPkmn" id="roll0" data-index="0">
+        <h3 class="rollName">Roll for Pokemon</h3>
+        <img class="rollImage" src="" />
+        <p class="atkText"></p>
+        <p class="rollAttack"></p>
+    </div>
+    <div class="rollPkmn" id="roll1" data-index="1">
+        <h3 class="rollName">Roll for Pokemon</h3>
+        <img class="rollImage" src="" />
+        <p class="atkText"></p>
+        <p class="rollAttack"></p>
+    </div>
+    <div class="rollPkmn" id="roll2" data-index="2">
+        <h3 class="rollName">Roll for Pokemon</h3>
+        <img class="rollImage" src="" />
+        <p class="atkText"></p>
+        <p class="rollAttack"></p>
+    </div>
+</section>
+{# Text Information for user's current team #}
+<div class="userInfo">
+    <h2>Create your team</h2>
+    <p>Current Power</p>
+    <p id="userTotal"></p>
+</div>
+{# Section to fill with user selected pokemon per js file #}
+<section class="userStyling">
+</section>
+{% endblock %}

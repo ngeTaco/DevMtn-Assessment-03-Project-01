@@ -72,10 +72,11 @@ function calculateTotalAttack() {
 
 //Note: decideWinner checks length of userPkmn, if its 6 it will calculate winner based on userAttack, send an Alert and Reload the page
 function decideWinner() {
+    const opponentTotal = document.querySelector('#oppTotal').innerText
     if (userPkmn.length === 6) {
         const userAttack = calculateTotalAttack();
         window.setTimeout(() => {
-            if (userAttack >= 633) {
+            if (userAttack >= opponentTotal) {
                 alert('Winner, Winner, Chicken Dinner!')
             } else {
                 alert('Try Again! You can do it!')
