@@ -24,18 +24,64 @@ function rollPokemon() {
 }
 
 //Note: add Pokemon to User's Team using index placement in HTML and from userPkmn array
+// function addToTeam(pokedata) {
+//     const targetIndex = userPkmn.length
+//     if (targetIndex > 5) {
+//         return;
+//     }
+//     userPkmn[targetIndex] = pokedata;
+//     document.querySelector(`#user${targetIndex} .userName`).innerText = pokedata.name;
+//     document.querySelector(`#user${targetIndex} .userImage`).src = pokedata.sprite;
+//     document.querySelector(`#user${targetIndex} .userAttack`).innerText = pokedata.attack;
+//     document.querySelector(`#user${targetIndex} .atkText`).innerText = 'Attack Power';
+// }
+
 function addToTeam(pokedata) {
     const targetIndex = userPkmn.length
     if (targetIndex > 5) {
         return;
     }
     userPkmn[targetIndex] = pokedata;
-    document.querySelector(`#user${targetIndex} .userName`).innerText = pokedata.name;
-    document.querySelector(`#user${targetIndex} .userImage`).src = pokedata.sprite;
-    document.querySelector(`#user${targetIndex} .userAttack`).innerText = pokedata.attack;
-    document.querySelector(`#user${targetIndex} .atkText`).innerText = 'Attack Power';
-}
+    //NEW: Start New Code
+    const sectionUserPokemon = document.querySelector('.userStyling');
 
+    const docFragment = document.createDocumentFragment();
+    const divElement = document.createElement('div');
+    divElement.setAttribute('class', 'userPkmn');
+    divElement.setAttribute('id', `user${targetIndex}`);
+    divElement.setAttribute('data-index', `${targetIndex}`);
+
+    const headerElement = document.createElement('h3');
+    headerElement.setAttribute('class', 'userName');
+    headerElement.innerText = pokedata.name;;
+
+    const imageElement = document.createElement('img');
+    imageElement.setAttribute('class', 'userImage');
+    imageElement.src = pokedata.sprite;
+
+    const paragraphAttackElement = document.createElement('p');
+    paragraphAttackElement.setAttribute('class', 'atkText');
+    paragraphAttackElement.innerText = 'Attack Power';
+
+    const paragraphPowerElement = document.createElement('p');
+    paragraphPowerElement.setAttribute('class', 'userAttack');
+    paragraphPowerElement.innerText = pokedata.attack;
+
+    docFragment.appendChild(divElement);
+    divElement.appendChild(headerElement);
+    divElement.appendChild(imageElement);
+    divElement.appendChild(paragraphAttackElement);
+    divElement.appendChild(paragraphPowerElement);
+
+    sectionUserPokemon.appendChild(docFragment);
+
+
+    // document.querySelector(`#user${targetIndex} .userName`).innerText = pokedata.name;
+    // document.querySelector(`#user${targetIndex} .userImage`).src = pokedata.sprite;
+    // document.querySelector(`#user${targetIndex} .userAttack`).innerText = pokedata.attack;
+    // document.querySelector(`#user${targetIndex} .atkText`).innerText = 'Attack Power';
+}
+//NEW: End New Code
 //Note: Calculate combined Attack strength from userPkmn array
 function calculateTotalAttack() {
     let totalAttack = 0;

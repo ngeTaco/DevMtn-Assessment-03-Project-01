@@ -9,7 +9,7 @@
         <h3>Power Level</h3>
         <p id="oppTotal">633</p>
     </div>
-    <section class="oppPkmn">
+    <section class="oppPkmn"> {# NEW: Opponent Pokemon #}
         <div>
             <h3>scizor</h3>
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png" />
@@ -47,12 +47,12 @@
             <p>55</p>
         </div>
     </section>
-    <div class="userInfo">
+    {# <div class="userInfo">
         <h2>Create your team</h2>
         <p>Current Power</p>
         <p id="userTotal"></p>
-    </div>
-    <section class="userStyling">
+    </div> #}
+    {# <section class="userStyling">
         <div class="userPkmn" id="user0" data-index="0">
             <h3 class="userName">Pick a Pokemon</h3>
             <img class="userImage" src="" />
@@ -89,7 +89,7 @@
             <p class="atkText"></p>
             <p class="userAttack"></p>
         </div>
-    </section>
+    </section> #}
     <div class="rollInfo">
         <h2>Draft Pool</h2>
         <p>Pick from the the pool of 3 until you have a team of 6</p>
@@ -98,7 +98,7 @@
             <button type="button">Roll for Pokemon</button>
         </div>
     </div>
-    <section class="rolledStyling">
+    <section class="rolledStyling"> {# NEW: Rolled Pokemon #}
         <div class="rollPkmn" id="roll0" data-index="0">
             <h3 class="rollName">Roll for Pokemon</h3>
             <img class="rollImage" src="" />
@@ -117,5 +117,13 @@
             <p class="atkText"></p>
             <p class="rollAttack"></p>
         </div>
+    </section>
+    <div class="userInfo">
+        <h2>Create your team</h2>
+        <p>Current Power</p>
+        <p id="userTotal"></p>
+    </div>
+    <section class="userStyling">
+
     </section>
     {% endblock %}
